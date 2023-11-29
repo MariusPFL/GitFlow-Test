@@ -31,22 +31,20 @@ Console.WriteLine("Type in your Bank Account and we search it for you.");
 
 String input = Console.ReadLine();
 List<string> BankAccounts = new List<string>() { "BA1", "BA2", "BA3", "BA4", "BA5", "BA6", "BA7", "BA8", "BA9", "BA10" };
-Console.WriteLine("Found BankAccount: " + searchBankAccount(BankAccounts));
+Console.WriteLine("Found BankAccount: " + searchBankAccount(BankAccounts, input));
 
 // Develop
 // Release
 // Release Fixed
 
-string searchBankAccount(List<string> BankAccountsParam)
+string searchBankAccount(List<string> BankAccountsParam, string input)
 {
 	foreach (var item in BankAccountsParam)
 	{
-        if (false)
+        if (item == input)
         {
             return item;
         }
     }
-    // Definitely no Bug
-    searchBankAccount(BankAccountsParam);
-    return "";
+    return "Nothing found";
 }
